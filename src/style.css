@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-:rot {
+:root {
     --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
     --Softred: hsl(14, 88%, 65%);
     --Softviolet: hsl(273, 75%, 66%);
@@ -8,6 +8,7 @@
     --Verydarkgrayishblue: hsl(237, 12%, 33%);
     --Darkgrayishblue: hsl(240, 6%, 50%);
     --Lightgrayishblue: hsl(240, 5%, 91%);
+    --White: #fff
 }
 
 * {
@@ -17,33 +18,80 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    min-height: 100vh;
+    min-width: 100%;
     font-size: .75rem;
-    background: linear-gradient(to bottom var(--Softviolet), var(--Softblue));
+    background: linear-gradient(180deg, var(--Softviolet), var(--Softblue));
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-main {
-    width: 20.25rem;
-    height:538px;
-    margin: 9.125rem 24px 2.875rem;
-    border: 1px solid black;
-    border-radius: 25px;
+.card-container {
+    width: 20.625rem;
+    min-height:33.625rem;
+    margin: 9.125rem auto 1.875rem;
+    border-radius: 1.5rem;
+    background-color: var(--White);
+    box-shadow: 0 .625rem 2.5rem var(--Verydarkdesaturatedblue);
+    padding: 1.5rem;
 }
 
-/* .card-container__s2-summary {
-    border-bottom: 1px solid var(--Verydarkdesaturatedblue);
-} */
+.card-container__s1__image {
+    width: 15rem;
+    display: block;
+    margin: -135px auto 0;
+}
+
+.card-container__s1-image-shadow {
+    width: 15rem;
+    content: url(./images/bg-pattern-mobile.svg);
+    margin: -75px auto 0;
+}
 
 .attribution { 
-    margin: 0 0 20px;
-    font-size: 11px; 
+    font-weight: 700;
+    font-size: 12px; 
     text-align: center; 
 }
 
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a {
+    margin: 0;
+    width: 20.625rem;
+    color: antiquewhite;
+    text-decoration: none;
+}
 
+.card-container__s2-title {
+    margin: 24px 0 30px;
+    text-align: center;
+    font-size: 2rem;
+}
 
+.card-container__s2-details {
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    position: relative;
+}
+
+.card-container__s2-details[open] {
+    font-weight: 700;
+}
+
+.card-container__s2-summary {
+    list-style: none;
+}
+
+.card-container__s2-paragraph {
+    font-weight: 400;
+    color: var(--Verydarkgrayishblue);
+    margin: .9375rem 0;
+    font-size: 14px;
+}
+
+.card-container__s2-details-icon {
+    position: absolute;
+    right: .3125rem;
+}
+
+.card-container__s2-details[open] .card-container__s2-details-icon {
+    transform: rotate(180deg);
+}
