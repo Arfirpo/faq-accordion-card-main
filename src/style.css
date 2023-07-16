@@ -90,8 +90,15 @@ body {
 .card-container__s2-details-icon {
     position: absolute;
     right: .3125rem;
+    transition: 300ms;
 }
 
 .card-container__s2-details[open] .card-container__s2-details-icon {
     transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.card-container__s2-summary:hover {
+    cursor: pointer;
+    color: var(--Softred);
 }
