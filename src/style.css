@@ -87,6 +87,11 @@ body {
     font-size: 14px;
 }
 
+.card-container__s2-line {
+    border-color: transparent;
+    border-bottom-color: var(--Lightgrayishblue);
+}
+
 .card-container__s2-details-icon {
     position: absolute;
     right: .3125rem;
@@ -101,4 +106,43 @@ body {
 .card-container__s2-summary:hover {
     cursor: pointer;
     color: var(--Softred);
+}
+
+@media (min-width: 65.25rem) {
+    .card-container {
+        width: 57.75rem;
+        display: flex;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-position-x: -33.5rem;
+        background-position-y: -17.5625rem;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .card-container__s1,
+    .card-container__s2 {
+        width: 100%;
+    }
+
+    .card-container__s1__image {
+        width: 29.625rem;
+        margin: 4.1875rem 0 0 -110px;
+    }
+
+    .card-container__s1-image-shadow {
+        content: '';
+    }
+
+    .card-container__s2 {
+        margin: .9375rem 5rem 1.25rem;
+    }
+
+    .card-container__s2-title {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    .card-container__s2-details {
+        margin: 1.625rem 0;
+    }
 }
