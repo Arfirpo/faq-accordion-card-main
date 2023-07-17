@@ -18,21 +18,23 @@
 }
 
 body {
-    min-height: 100vh;
+    max-height: 100vh;
     min-width: 100%;
     font-size: .75rem;
     background: linear-gradient(180deg, var(--Softviolet), var(--Softblue));
     font-family: 'Kumbh Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 .card-container {
     width: 20.625rem;
     min-height:33.625rem;
-    margin: 9.125rem auto 1.875rem;
+    margin: 8.75rem auto 1.875rem;
     border-radius: 1.5rem;
     background-color: var(--White);
     box-shadow: 0 .625rem 2.5rem var(--Verydarkdesaturatedblue);
     padding: 1.5rem;
+    box-sizing: border-box;
 }
 
 .card-container__s1__image {
@@ -45,19 +47,6 @@ body {
     width: 15rem;
     content: url(./images/bg-pattern-mobile.svg);
     margin: -75px auto 0;
-}
-
-.attribution { 
-    font-weight: 700;
-    font-size: 12px; 
-    text-align: center; 
-}
-
-.attribution a {
-    margin: 0;
-    width: 20.625rem;
-    color: antiquewhite;
-    text-decoration: none;
 }
 
 .card-container__s2-title {
@@ -108,15 +97,31 @@ body {
     color: var(--Softred);
 }
 
+.attribution { 
+    font-weight: 700;
+    font-size: 12px; 
+    text-align: center; 
+    margin-bottom: 45px;
+}
+
+.attribution a {
+    margin: 0;
+    width: 20.625rem;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
 @media (min-width: 65.25rem) {
     .card-container {
         width: 57.75rem;
+        min-height: 13.25rem;
         display: flex;
         background-image: url(./images/bg-pattern-desktop.svg);
         background-position-x: -33.5rem;
         background-position-y: -17.5625rem;
         background-repeat: no-repeat;
         background-size: 100%;
+        margin-top: 7.8125rem;
     }
 
     .card-container__s1,
@@ -144,5 +149,10 @@ body {
 
     .card-container__s2-details {
         margin: 1.625rem 0;
+    }
+
+    .attribution {
+        margin-bottom: 82px;
+        font-size: 1rem;
     }
 }
